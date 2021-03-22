@@ -1,3 +1,5 @@
+import impl.ListNode
+
 /**
  * 文件头
  *
@@ -22,5 +24,10 @@ interface AlgorithmInterface {
      * 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
      */
     fun singleNumber(nums: IntArray): Int
+
+    /**
+     * 给定一个链表，判断链表中是否有环。
+     */
+    fun linkListHasCycle(node: ListNode): Boolean
 
 }
