@@ -1,3 +1,5 @@
+import impl.ListNode
+
 /**
  * 文件头
  *
@@ -34,7 +36,27 @@ class Current : AlgorithmInterface {
     }
 
     override fun singleNumber(nums: IntArray): Int {
-        return 0
+        var x = 0
+        for (num in nums) {
+            x = x xor num
+        }
+        return x
+    }
+
+    override fun linkListHasCycle(node: ListNode): Boolean {
+        var slowPoint = node.next
+        var fastPoint = slowPoint?.next
+
+        while (true) {
+            if (fastPoint == null) {
+                return false
+            }
+            if (fastPoint == slowPoint) {
+                return true
+            }
+            slowPoint = slowPoint?.next
+            fastPoint = fastPoint.next?.next
+        }
     }
 }
 
