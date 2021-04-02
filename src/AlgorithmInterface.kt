@@ -1,5 +1,3 @@
-import impl.ListNode
-
 /**
  * 文件头
  *
@@ -30,4 +28,13 @@ interface AlgorithmInterface {
      */
     fun linkListHasCycle(node: ListNode): Boolean
 
+    /**
+     * 不提供头结点的情况下删除当前节点
+     */
+    fun removeNode(node: ListNode?)
+
+    /**
+     * 翻转链表
+     */
+    fun reverseNode(head: ListNode?): ListNode?
 }

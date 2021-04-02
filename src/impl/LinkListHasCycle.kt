@@ -1,5 +1,7 @@
 package impl
 
+import ListNode
+
 /**
  * 链表是否存在环
  *
@@ -21,8 +23,4 @@ fun hasCycle(head: ListNode?): Boolean {
         fastPoint = fastPoint.next?.next
         slowPoint = slowPoint?.next
     }
-}
-
-class ListNode {
-    var next: ListNode? = null
 }

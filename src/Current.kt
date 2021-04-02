@@ -1,5 +1,3 @@
-import impl.ListNode
-
 /**
  * 文件头
  *
@@ -58,6 +56,10 @@ class Current : AlgorithmInterface {
             fastPoint = fastPoint.next?.next
         }
     }
+
+    override fun removeNode(node: ListNode?) {}
+
+    override fun reverseNode(head: ListNode?): ListNode? { return null }
 }
 
 fun main() {
